@@ -2,15 +2,15 @@
 
 Custom ELRS RX firmware for RFM96 module (SX1276, +17dBm max).
 
-![RFM96 Module](https://cdn-shop.adafruit.com/970x728/3073-00.jpg)
+![RFM96 Module](images/RFM96.avif)
 
 ## Hardware
 
 ### Receiver (RX only)
-- **MCU:** ESP-01F (ESP8285)
+- **MCU:** ESP8285
 - **Radio:** RFM96 (SX1276, +17dBm)
 
-![ESP-01F](https://www.cdebyte.com/u_file/2212/photo/4b67b3f116.png)
+![ESP8285](images/ESP8285M2.jpg)
 
 ## Frequency
 - Band: US433W (423.5-438MHz, 20 channels)
