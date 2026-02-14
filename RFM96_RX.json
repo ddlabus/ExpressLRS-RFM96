@@ -1,0 +1,18 @@
+{
+    "product_name": "DIY RFM96 RX",
+    "serial_rx": 3,
+    "serial_tx": 1,
+    "radio_dio0": 4,
+    "radio_dio1": 5,
+    "radio_miso": 12,
+    "radio_mosi": 13,
+    "radio_nss": 15,
+    "radio_sck": 14,
+    "power_min": 0,
+    "power_high": 3,
+    "power_max": 3,
+    "power_default": 3,
+    "power_control": 0,
+    "power_values": [0, 40, 80, 127],
+    "led": 16
+}
