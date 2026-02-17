@@ -1,0 +1,19 @@
+{
+    "product_name": "DIY ESP32-C3 SuperMini RX (RFM96)",
+    "serial_rx": 20,
+    "serial_tx": 21,
+    "radio_dio0": 1,
+    "radio_dio1": 2,
+    "radio_miso": 5,
+    "radio_mosi": 4,
+    "radio_nss": 7,
+    "radio_rst": 3,
+    "radio_sck": 6,
+    "power_min": 0,
+    "power_high": 3,
+    "power_max": 3,
+    "power_default": 3,
+    "power_control": 0,
+    "power_values": [0, 40, 80, 127],
+    "led": 8
+}
