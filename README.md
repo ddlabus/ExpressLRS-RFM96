@@ -10,7 +10,7 @@ Custom ELRS RX firmware for RFM96 module (SX1276, +17dBm max).
 - **MCU:** ESP32-C3 SuperMini
 - **Radio:** RFM96 (SX1276, +17dBm)
 
-![ESP32-C3 SuperMini](https://raw.githubusercontent.com/ddlabus/ExpressLRS-RFM96/main/images/ESP32-C3.jpg)
+![ESP32-C3 SuperMini](https://raw.githubusercontent.com/ddlabus/ExpressLRS-RFM96/main/images/ESP32-C3.avif)
 
 ## Frequency
 - Band: US433W (423.5-438MHz, 20 channels)
