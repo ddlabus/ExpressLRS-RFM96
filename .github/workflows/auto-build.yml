@@ -131,7 +131,7 @@ jobs:
           body: |
             ## Auto-built from ELRS ${{ steps.elrs_release.outputs.tag }}
 
-            RX firmware for ${{ env.MODULE_NAME }} module (SX1276, +17dBm max).
+            RX firmware for ${{ env.MODULE_NAME }} module (SX1276, +20dBm/100mW).
 
             ### Hardware
             - **RX:** ESP32-C3 SuperMini + ${{ env.MODULE_NAME }}

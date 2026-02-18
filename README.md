@@ -1,6 +1,6 @@
 # ExpressLRS RX for RFM96 (433MHz)
 
-Custom ELRS RX firmware for RFM96 module (SX1276, +17dBm max).
+Custom ELRS RX firmware for RFM96 module (SX1276, +20dBm/100mW).
 
 ![RFM96 Module](https://raw.githubusercontent.com/ddlabus/ExpressLRS-RFM96/main/images/RFM96.avif)
 
