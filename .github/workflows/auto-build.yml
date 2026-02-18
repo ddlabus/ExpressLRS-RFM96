@@ -86,7 +86,8 @@ jobs:
       - name: Create hardware layout files
         if: steps.check_built.outputs.should_build == 'true'
         run: |
-          cat > src/hardware/ESP32_RFM96_RX.json << 'EOF'
+          mkdir -p src/hardware/RX
+          cat > src/hardware/RX/ESP32_RFM96_RX.json << 'EOF'
           {
               "platform": "esp32",
               "product_name": "DIY ESP32 RX (RFM96)",
@@ -108,7 +109,7 @@ jobs:
               "led": 22
           }
           EOF
-          cp src/hardware/ESP32_RFM96_RX.json .
+          cp src/hardware/RX/ESP32_RFM96_RX.json .
 
       - name: Register custom hardware in targets.json
         if: steps.check_built.outputs.should_build == 'true'
