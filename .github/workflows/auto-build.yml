@@ -110,6 +110,32 @@ jobs:
           EOF
           cp src/hardware/ESP32C3_SuperMini_RX.json .
 
+      - name: Register custom hardware in targets.json
+        if: steps.check_built.outputs.should_build == 'true'
+        run: |
+          python3 << 'PYTHON'
+          import json
+          with open('src/hardware/targets.json', 'r') as f:
+              targets = json.load(f)
+
+          if 'diy' not in targets:
+              targets['diy'] = {}
+          if 'rx' not in targets['diy']:
+              targets['diy']['rx'] = {}
+
+          targets['diy']['rx']['esp32c3_supermini_rfm96'] = {
+              "product_name": "DIY ESP32-C3 SuperMini RX (RFM96)",
+              "lua_name": "C3 RFM96 RX",
+              "layout_file": "ESP32C3_SuperMini_RX.json",
+              "upload_methods": ["uart", "wifi"],
+              "platform": "esp32-c3",
+              "firmware": "Unified_ESP32C3_900_RX"
+          }
+
+          with open('src/hardware/targets.json', 'w') as f:
+              json.dump(targets, f, indent=2)
+          PYTHON
+
       - name: Configure build
         if: steps.check_built.outputs.should_build == 'true'
         working-directory: src
