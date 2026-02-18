@@ -8,7 +8,7 @@ Custom ELRS RX firmware for RFM96 module (SX1276, +17dBm max).
 
 ### Receiver (RX only)
 - **MCU:** ESP32-C3 SuperMini
-- **Radio:** RFM96 (SX1276, +17dBm)
+- **Radio:** RFM96 (SX1276, +20dBm/100mW)
 
 ![ESP32-C3 SuperMini](https://raw.githubusercontent.com/ddlabus/ExpressLRS-RFM96/main/images/ESP32-C3.avif)
 
