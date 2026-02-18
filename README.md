@@ -74,9 +74,19 @@ ESP32-C3 SuperMini         RFM96
 2. Connect USB-C cable
 3. Release BOOT button
 
+**Full flash (virgin chip):**
 ```bash
-esptool.py --port /dev/ttyACM0 --baud 460800 \
-    --chip esp32c3 write_flash 0x0 ELRS_*_RX_ESP32C3_RFM96_US433W.bin
+esptool.py --chip esp32c3 --port /dev/ttyACM0 --baud 460800 write_flash \
+    0x0 bootloader_rx.bin \
+    0x8000 partitions_rx.bin \
+    0xe000 boot_app0_rx.bin \
+    0x10000 ELRS_*_RX_ESP32C3_RFM96_US433W.bin
+```
+
+**Update only (already has ELRS):**
+```bash
+esptool.py --chip esp32c3 --port /dev/ttyACM0 --baud 460800 \
+    write_flash 0x10000 ELRS_*_RX_ESP32C3_RFM96_US433W.bin
 ```
 
 ### After Flashing
@@ -90,10 +100,15 @@ esptool.py --port /dev/ttyACM0 --baud 460800 \
 See [Releases](https://github.com/ddlabus/ExpressLRS-RFM96/releases)
 
 ## Files
-| File | Description |
-|------|-------------|
-| `ELRS_*_RX_ESP32C3_RFM96_US433W.bin` | Receiver firmware (ESP32-C3) |
-| `ESP32C3_SuperMini_RX.json` | RX hardware layout |
+
+### RX (ESP32-C3)
+| File | Description | Address |
+|------|-------------|---------|
+| `bootloader_rx.bin` | ESP32-C3 bootloader | 0x0 |
+| `partitions_rx.bin` | Partition table | 0x8000 |
+| `boot_app0_rx.bin` | Boot selector | 0xe000 |
+| `ELRS_*_RX_ESP32C3_RFM96_US433W.bin` | Receiver firmware | 0x10000 |
+| `ESP32C3_SuperMini_RX.json` | RX hardware layout | - |
 
 ## Links
 - [RFM96 Datasheet](https://www.hoperf.com/modules/lora/RFM96.html)
